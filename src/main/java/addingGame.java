@@ -3,8 +3,13 @@ import com.sun.tools.javac.util.StringUtils;
 import java.util.Random;
 import java.util.Scanner;
 
+import java.util.Timer;
+
 public class addingGame {
     public static void main(String[] args) {
+
+        long startTime = System.currentTimeMillis();
+
         Random random = new Random();
 
         String input = "";
@@ -27,16 +32,16 @@ public class addingGame {
         result = Integer.parseInt(input) + result;
 
         if (result == answer){
-            System.out.println("Good job!!");
+            long elapsedTime = System.currentTimeMillis() - startTime;
+            long elapsedSeconds = elapsedTime / 1000;
+            System.out.println("Good job!! You took " + elapsedSeconds + " seconds");
         } else {
-            System.out.println("Bad job!");
+            System.out.println("Bad job! The answer was: " + answer);
         }
     }
 
     public static boolean isNumeric(String string) {
         int intValue;
-
-        System.out.println(String.format("Parsing string: \"%s\"", string));
 
         if(string == null || string.equals("")) {
             System.out.println("String cannot be parsed, it is null or empty.");
