@@ -5,7 +5,7 @@ public class addingGame {
     public static void main(String[] args) {
         Random random = new Random();
 
-        String input;
+        String input = "";
         int result = 0;
 
         int number1 = random.nextInt(100);
@@ -18,12 +18,19 @@ public class addingGame {
         StringBuilder sb = new StringBuilder("Enter value: ");
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter value: ");
-        input = scanner.nextLine();
-        result = Integer.parseInt(input) +result;
+        while (input.isEmpty()) {
+            System.out.print("Enter value: ");
+            input = scanner.nextLine();
+
+        }
+
+
+        result = Integer.parseInt(input) + result;
 
         if (result == answer){
             System.out.println("Good job!!");
+        } else {
+            System.out.println("Bad job!");
         }
 
     }
