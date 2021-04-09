@@ -1,3 +1,3 @@
 # games
 
-This adding game runs on Java 8
+This is a simple adding game runs on Java, project for learning purposes.
