@@ -1,9 +1,5 @@
-import com.sun.tools.javac.util.StringUtils;
-
 import java.util.Random;
 import java.util.Scanner;
-
-import java.util.Timer;
 
 public class addingGame {
     public static void main(String[] args) {
@@ -20,7 +16,6 @@ public class addingGame {
 
         int answer = number1 + number2;
 
-        StringBuilder sb = new StringBuilder("Enter value: ");
         Scanner scanner = new Scanner(System.in);
 
         while (input.isEmpty()||!isNumeric(input)) {
