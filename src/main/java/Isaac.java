@@ -34,7 +34,7 @@ public class Isaac {
 
             while (roll) {
                 int rollValue;
-                System.out.println("you roll a " + (rollValue = random.nextInt(6)));
+                System.out.println("you roll a " + (rollValue = random.nextInt(6) + 1));
                 if (rollValue >= squirt.getRoll()) {
                     squirt.setHealth(squirt.getHealth() - player.getAttack());
                 } else {
